@@ -78,7 +78,7 @@ class Wallet:
         if block_filled > 50: base_fee = int(base_fee * 1.127)
 
         max_fee = int(base_fee + int(max_priority))
-        return {'maxPriorityFeePerGas': int(max_priority), 'maxFeePerGas': max_fee}
+        return {'maxPriorityFeePerGas': max_fee, 'maxFeePerGas': max_fee}
 
 
     async def sent_tx(
